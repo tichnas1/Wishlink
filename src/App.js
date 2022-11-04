@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Navbar from './components/Navbar';
+import Brands from './components/Brands';
 
 import './App.css';
 
@@ -8,7 +9,10 @@ function App() {
     <div className='page-wrapper'>
       <Navbar />
       <Header />
-      <main>Content</main>
+
+      <main>
+        <Brands />
+      </main>
     </div>
   );
 }

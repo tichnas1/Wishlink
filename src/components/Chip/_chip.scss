@@ -1,0 +1,17 @@
+.chip {
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: $color-grey-2;
+  border: 1px solid $color-grey-1;
+  cursor: pointer;
+  transition: all 500ms;
+  white-space: nowrap;
+
+  &--active {
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+}
