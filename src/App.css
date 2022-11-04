@@ -22,3 +22,50 @@ body {
   font-size: 1.6rem;
   color: #000;
   line-height: 1.5; }
+
+body {
+  background-color: #e5e5e5; }
+
+.page-wrapper {
+  max-width: 450px;
+  background-color: #fff;
+  margin: auto;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem; }
+
+main {
+  margin-top: 24.4rem; }
+
+.header {
+  background: linear-gradient(99.99deg, #3c7031 0.9%, #4ca735 100%);
+  padding: 1.6rem;
+  padding-bottom: 5.25rem;
+  color: #fff;
+  font-size: 1.4rem;
+  position: fixed;
+  top: 5.6rem;
+  z-index: -1;
+  max-width: inherit;
+  width: 100%; }
+  .header__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem; }
+  .header__spiral {
+    position: absolute;
+    bottom: -12px;
+    right: 0; }
+
+.nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background: linear-gradient(99.99deg, #3c7031 0.9%, #4ca735 100%);
+  width: 100%;
+  max-width: inherit;
+  padding: 1.6rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center; }
+  .nav__icon {
+    margin-right: 2.4rem; }

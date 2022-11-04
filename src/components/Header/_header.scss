@@ -1,0 +1,24 @@
+.header {
+  background: linear-gradient(99.99deg, #3c7031 0.9%, #4ca735 100%);
+  padding: 1.6rem;
+  padding-bottom: 5.25rem;
+  color: $color-white;
+  font-size: 1.4rem;
+  position: fixed;
+  top: 5.6rem;
+  z-index: -1;
+  max-width: inherit;
+  width: 100%;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+
+  &__spiral {
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+  }
+}

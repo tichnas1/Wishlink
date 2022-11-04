@@ -1,0 +1,16 @@
+.nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background: linear-gradient(99.99deg, #3c7031 0.9%, #4ca735 100%);
+  width: 100%;
+  max-width: inherit;
+  padding: 1.6rem 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 2.4rem;
+  }
+}
