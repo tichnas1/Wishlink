@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useSWR from 'swr';
+import { toast } from 'react-toastify';
 
 import Chip from '../Chip';
 import BrandCard from '../BrandCard';
 import brandsApi from '../../api/brands';
+import Loader from '../Loader';
 
 function Brands() {
   const [selectedTags, setSelectedTags] = useState([]);
@@ -21,6 +23,11 @@ function Brands() {
   );
 
   const loading = (!tagsData && !tagsError) || (!brandsData && !brandsError);
+
+  useEffect(() => {
+    if (!loading && (tagsError || brandsError))
+      toast.error('Some error occured');
+  }, [loading]);
 
   const toggleTag = (tag, active) => {
     if (tag === 'All brands') {
@@ -68,7 +75,7 @@ function Brands() {
         </div>
       )}
 
-      {loading && <p>Loading</p>}
+      {loading && <Loader />}
 
       {brandsData && (
         <div className='brands__cards-container'>

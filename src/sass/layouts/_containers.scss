@@ -16,4 +16,8 @@ main {
   min-height: calc(100vh - 24.4rem);
   max-width: inherit;
   padding-bottom: 8rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

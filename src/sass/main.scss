@@ -2,6 +2,7 @@
 
 @import 'base/base';
 @import 'base/typography';
+@import 'base/animations';
 
 @import 'layouts/containers';
 
@@ -12,3 +13,4 @@
 @import '../components/BrandCard/brand-card';
 @import '../components/Earnings/earnings';
 @import '../components/Button/button';
+@import '../components/Loader/loader';

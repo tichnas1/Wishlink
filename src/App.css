@@ -23,6 +23,14 @@ body {
   color: #000;
   line-height: 1.5; }
 
+@keyframes loading-circle {
+  0% {
+    transform: scale(0.2);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
+
 body {
   background-color: #e5e5e5; }
 
@@ -39,6 +47,8 @@ main {
   min-height: calc(100vh - 24.4rem);
   max-width: inherit;
   padding-bottom: 8rem; }
+  main::-webkit-scrollbar {
+    display: none; }
 
 .header {
   background: linear-gradient(99.99deg, #3c7031 0.9%, #4ca735 100%);
@@ -167,3 +177,12 @@ main {
   .btn:hover, .btn:active {
     background-color: #e91e63;
     color: #fff; }
+
+.loader {
+  text-align: center;
+  margin: 2rem; }
+  .loader__circle {
+    fill: none;
+    stroke: #e91e63;
+    animation: loading-circle 1s linear infinite;
+    transform-origin: center; }
