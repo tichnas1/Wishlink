@@ -2,10 +2,11 @@
   background: linear-gradient(99.99deg, #3c7031 0.9%, #4ca735 100%);
   padding: 1.6rem;
   padding-bottom: 5.25rem;
+  padding-top: calc(5.6rem + 1.6rem); // 5.6rem is the height of Navbar
   color: $color-white;
   font-size: 1.4rem;
   position: fixed;
-  top: 5.6rem;
+  top: 0;
   z-index: -1;
   max-width: inherit;
   width: 100%;

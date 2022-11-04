@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -9,12 +10,29 @@ import Earnings from './components/Earnings';
 import './App.css';
 
 function App() {
+  const mainSectionRef = useRef();
+  const navbarRef = useRef();
+  const [navActive, setNavActive] = useState(false);
+
+  const onScroll = () => {
+    const mainTop = mainSectionRef.current.getBoundingClientRect().top;
+    const navHeight = navbarRef.current.getBoundingClientRect().height;
+
+    setNavActive(mainTop < navHeight);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <div className='page-wrapper'>
-      <Navbar />
+      <Navbar ref={navbarRef} active={navActive} />
       <Header />
 
-      <main>
+      <main ref={mainSectionRef}>
         <Brands />
         <Earnings />
       </main>

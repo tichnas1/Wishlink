@@ -1,12 +1,14 @@
+import { forwardRef } from 'react';
+
 import arrowLeft from '../../assets/arrow-left.svg';
 
-function Navbar() {
+function Navbar({ active }, ref) {
   return (
-    <nav className='nav'>
+    <nav className={'nav' + (active ? ' nav--active' : '')} ref={ref}>
       <img src={arrowLeft} alt='back' className='nav__icon' />
       <p>Brands</p>
     </nav>
   );
 }
 
-export default Navbar;
+export default forwardRef(Navbar);

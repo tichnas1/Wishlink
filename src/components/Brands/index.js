@@ -27,7 +27,7 @@ function Brands() {
   useEffect(() => {
     if (!loading && (tagsError || brandsError))
       toast.error('Some error occured');
-  }, [loading]);
+  }, [loading, tagsError, brandsError]);
 
   const toggleTag = (tag, active) => {
     if (tag === 'All brands') {
