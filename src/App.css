@@ -34,7 +34,9 @@ body {
   border-top-right-radius: 0.75rem; }
 
 main {
-  margin-top: 24.4rem; }
+  margin-top: 24.4rem;
+  overflow-y: scroll;
+  min-height: calc(100vh - 24.4rem); }
 
 .header {
   background: linear-gradient(99.99deg, #3c7031 0.9%, #4ca735 100%);
@@ -90,6 +92,13 @@ main {
   .brands__tags-container::-webkit-scrollbar {
     display: none; }
 
+.brands__cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.6rem;
+  column-gap: 1.6rem;
+  padding: 1.6rem; }
+
 .chip {
   padding: 0.8rem 1.6rem;
   border-radius: 2rem;
@@ -104,3 +113,32 @@ main {
     color: #fff;
     background-color: #e91e63;
     border-color: #e91e63; }
+
+.brand-card {
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #e5e5e5;
+  overflow: hidden; }
+  .brand-card__logo {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 2px solid #fff; }
+  .brand-card__title {
+    margin-top: 1.6rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap; }
+  .brand-card__highlight {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 2px 0.8rem;
+    background: linear-gradient(90.31deg, #e38125 0.25%, rgba(227, 129, 37, 0.6) 113.83%);
+    border-radius: 2px; }

@@ -12,4 +12,6 @@ body {
 
 main {
   margin-top: 24.4rem;
+  overflow-y: scroll;
+  min-height: calc(100vh - 24.4rem);
 }

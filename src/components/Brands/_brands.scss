@@ -23,4 +23,12 @@
       display: none;
     }
   }
+
+  &__cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.6rem;
+    column-gap: 1.6rem;
+    padding: 1.6rem;
+  }
 }

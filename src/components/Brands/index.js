@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useSWR from 'swr';
 
 import Chip from '../Chip';
+import BrandCard from '../BrandCard';
 import brandsApi from '../../api/brands';
 
 function Brands() {
@@ -69,8 +70,13 @@ function Brands() {
 
       {loading && <p>Loading</p>}
 
-      {brandsData &&
-        brandsData.map(brand => <p key={brand.name}>{brand.name}</p>)}
+      {brandsData && (
+        <div className='brands__cards-container'>
+          {brandsData.map(brand => (
+            <BrandCard key={brand.name} brand={brand} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
