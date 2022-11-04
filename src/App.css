@@ -36,7 +36,9 @@ body {
 main {
   margin-top: 24.4rem;
   overflow-y: scroll;
-  min-height: calc(100vh - 24.4rem); }
+  min-height: calc(100vh - 24.4rem);
+  max-width: inherit;
+  padding-bottom: 8rem; }
 
 .header {
   background: linear-gradient(99.99deg, #3c7031 0.9%, #4ca735 100%);
@@ -142,3 +144,26 @@ main {
     padding: 2px 0.8rem;
     background: linear-gradient(90.31deg, #e38125 0.25%, rgba(227, 129, 37, 0.6) 113.83%);
     border-radius: 2px; }
+
+.earnings {
+  position: fixed;
+  width: 100%;
+  max-width: inherit;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: 2.5rem; }
+  .earnings__btn {
+    background-color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600; }
+
+.btn {
+  border: 1px solid #e91e63;
+  color: #e91e63;
+  padding: 1rem 2.4rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 500ms; }
+  .btn:hover, .btn:active {
+    background-color: #e91e63;
+    color: #fff; }

@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Brands from './components/Brands';
+import Earnings from './components/Earnings';
 
 import './App.css';
 
@@ -12,6 +13,7 @@ function App() {
 
       <main>
         <Brands />
+        <Earnings />
       </main>
     </div>
   );
